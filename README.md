@@ -1,10 +1,32 @@
 # 🚗 DRIVEFIX
 
+## Current redesign — browser-only demo
+
+**New design:** https://drivefix-ua.pages.dev/
+
+The redesigned public showcase demonstrates service selection and a synthetic booking confirmation entirely in the browser. It does not create a real appointment, submit a booking to a server, or send Telegram notifications. Do not enter real personal data. A demo confirmation ID is not proof of backend acceptance or message delivery.
+
+## Separate project revisions
+
+| Revision | Purpose and delivery behavior |
+| --- | --- |
+| Current redesign on Cloudflare Pages | Static browser-only synthetic demo; no real booking or Telegram delivery. |
+| Legacy source in this repository | Original HTML/CSS/JavaScript frontend on GitHub Pages and Python/Flask API on Render, with a real Telegram Bot API integration when configured and running. Legacy runtime availability and Telegram delivery are not verified by this documentation update. |
+| Separate experimental Cloudflare backend | Independent experimental Workers/D1/Queue/Cron work, not the backend of this public browser demo. No production-readiness or successful delivery claim is implied. |
+
+This repository preserves the legacy Flask/Render/GitHub Pages revision. The documentation update does not replace its source or change any deployment, configuration, secrets, DNS, or messaging service. The separate SEO candidate is not deployed by this change.
+
+---
+
+## Legacy revision reference
+
+The sections below document the original implementation; its API examples describe the real integration and are not instructions to test or submit the public synthetic demo.
+
 Responsive full-stack website for an auto service with online booking and Telegram integration.
 
 Customers can submit a service request directly through the website. The request is validated by the frontend and backend, processed by a Flask API and delivered to the auto service owner through Telegram.
 
-## 🌐 Live Demo
+## 🌐 Legacy deployment references
 
 **Website:**  
 https://roman-webdev.github.io/DRIVEFIX/
@@ -29,7 +51,7 @@ https://drivefix-wcz1.onrender.com/api/health
 - Environment variables for sensitive data
 - API health check
 - Responsive hero section
-- Production deployment
+- Legacy deployment configuration
 
 ## 🛠 Technologies
 
@@ -147,9 +169,7 @@ Example request:
 
 ## 📌 Status
 
-✅ Deployed and working.
-
-The frontend is hosted on GitHub Pages and the Flask API is deployed on Render.
+The original frontend deployment targets GitHub Pages and the Flask API targets Render. Current runtime health and real Telegram delivery have not been revalidated in this documentation-only update.
 
 ## 👨‍💻 Author
 
